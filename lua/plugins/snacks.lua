@@ -4,8 +4,15 @@ return {
   priority = 1000,
   opts = {
     dashboard = {
-      width = 40,
-      header = false,
+      width = 60, -- header is 59 chars; was 40
+      header = {
+        "████████╗██╗    ██╗██╗██╗     ██╗ ██████╗ ██╗  ██╗████████╗",
+        "╚══██╔══╝██║    ██║██║██║     ██║██╔════╝ ██║  ██║╚══██╔══╝",
+        "   ██║   ██║ █╗ ██║██║██║     ██║██║  ███╗███████║   ██║   ",
+        "   ██║   ██║███╗██║██║██║     ██║██║   ██║██╔══██║   ██║   ",
+        "   ██║   ╚███╔███╔╝██║███████╗██║╚██████╔╝██║  ██║   ██║   ",
+        "   ╚═╝    ╚══╝╚══╝ ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ",
+      },
       preset = {
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
@@ -22,7 +29,8 @@ return {
         },
       },
       sections = {
-        { section = "keys", gap = 1, padding = 3 },
+        { section = "header", padding = 1 },
+        { section = "keys",   gap = 1,    padding = 3 },
       },
     },
     notifier = { timeout = 1000 },

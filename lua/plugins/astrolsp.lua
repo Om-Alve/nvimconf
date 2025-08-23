@@ -10,15 +10,15 @@ return {
   opts = {
     -- Configuration table of features provided by AstroLSP
     features = {
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
+      codelens = true,        -- enable/disable codelens refresh on start
+      inlay_hints = false,    -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = true,     -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -44,22 +44,6 @@ return {
     config = {
       clangd = { capabilities = { offsetEncoding = "utf-8" } },
       lua_ls = { settings = { Lua = { hint = { enable = true, arrayIndex = "Disable" } } } },
-      basedpyright = {
-        before_init = function(_, c)
-          if not c.settings then c.settings = {} end
-          if not c.settings.python then c.settings.python = {} end
-          c.settings.python.pythonPath = vim.fn.exepath "python"
-        end,
-        settings = {
-          basedpyright = {
-            disableOrganizeImports = true,
-            analysis = {
-              typeCheckingMode = "basic",
-              autoImportCompletions = true,
-            },
-          },
-        },
-      },
       vtsls = {
         settings = {
           typescript = {

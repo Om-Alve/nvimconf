@@ -14,13 +14,11 @@ return {
         "bash-language-server",
         "lua-language-server",
         "markdown-oxide",
-        "basedpyright",
         "typos-lsp",
         "html-lsp",
         "json-lsp",
         "css-lsp",
         "clangd",
-        "gopls",
 
         -- install linters
         "shellcheck",

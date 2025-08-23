@@ -13,7 +13,7 @@ return {
       which_key = true,
       noice = true,
       notify = true,
-      ["neo-tree"] = true,
+      neotree = true,
     },
   },
 }

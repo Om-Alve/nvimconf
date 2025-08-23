@@ -48,7 +48,7 @@ return {
           mappings = {
 
             -- python
-            basedpyright = "[B]pyright",
+            pyright = "Pyright",
             ruff_format = "Ruff",
 
             -- markdown
@@ -61,7 +61,6 @@ return {
             stylua = "Stylua",
 
             -- go
-            gopls = "Gopls",
             gofmt = "Gofmt",
 
             -- c/cpp
