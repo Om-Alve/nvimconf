@@ -14,7 +14,7 @@ return {
     provider = "gemini",
     providers = {
       gemini = {
-        model = "gemini-3-pro-preview",
+        model = "gemini-3-flash-preview",
         temperature = 0,
         max_tokens = 4096,
       },
