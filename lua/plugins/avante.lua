@@ -11,30 +11,11 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "zai",
+    provider = "openai",
     providers = {
-      zai = {
+      openai = {
         endpoint = "https://api.z.ai/api/coding/paas/v4",
         model = "glm-4.7",
-        temperature = 0,
-      },
-      ollama = {
-        endpoint = "http://localhost:11434",
-        model = "gemma3:4b",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 20480,
-        },
-      },
-      moonshot = {
-        endpoint = "https://api.moonshot.ai/v1",
-        model = "kimi-k2-0711-preview",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 32768,
-        },
       },
     },
   },
