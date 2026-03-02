@@ -11,12 +11,12 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "gemini",
+    provider = "zai",
     providers = {
-      gemini = {
-        model = "gemini-3-flash-preview",
+      zai = {
+        endpoint = "https://api.z.ai/api/coding/paas/v4",
+        model = "glm-4.7",
         temperature = 0,
-        max_tokens = 4096,
       },
       ollama = {
         endpoint = "http://localhost:11434",
